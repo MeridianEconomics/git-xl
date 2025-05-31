@@ -27,10 +27,52 @@ running:
 C:\Developer>git xl install
 ```
 
-Alternatively, initialise Git XL locally (per repository), using the --local option, inside the root folder of your repository’s local working copy:
+Alternatively, initialise Git XL locally (per repository), using the --local option, inside the root folder of your repository's local working copy:
 
 ```
 C:\Developer>git xl install --local
+```
+
+### Ubuntu Installation
+
+To install Git XL on Ubuntu, follow these steps:
+
+1. Ensure you have Python 3.7 or later installed:
+```bash
+python3 --version
+```
+
+2. Install required system dependencies:
+```bash
+sudo apt-get update
+sudo apt-get install python3-pip python3-venv
+```
+
+3. Clone the repository and navigate to it:
+```bash
+git clone https://github.com/xlwings/git-xl.git
+cd git-xl
+```
+
+4. Create and activate a virtual environment (recommended):
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+5. Install the package in development mode:
+```bash
+pip install -e .
+```
+
+6. Install Git XL globally:
+```bash
+git xl install
+```
+
+Or install it locally in your repository:
+```bash
+git xl install --local
 ```
 
 ### Usage
